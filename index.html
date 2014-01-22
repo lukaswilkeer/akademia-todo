@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" data-nf-app="todoApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Akademia TODO</title>
+</head>
+<body>
+<div ng-controller="TodoCtrl">
+	<span></span>
+    <form ng-submit="addTodo()">
+    </form>
+	<ul>
+		<li bg-repeat="todo in todos">
+			<input type="checkbox" ng-model="todo.done">
+			<span class="todo-{{todo.done}}">{{todo.text}}</span>
+		</li>
+	</ul>
+</div>
+<script src="bower_components/angular/angular.js"></script>	
+<script src="app/controllers/todo.js"></script>	
+</body>
+</html>
